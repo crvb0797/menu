@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Menú digital | villatoro.dev</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="aspect">
+        <div class="aspect-inner">
+          <div class="flipbook" id="flipbook">
+            <div class="page">
+              <img
+                src="./img/1.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="page">
+              <img
+                src="./img/2.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="page">
+              <img
+                src="./img/3.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="page">
+              <img
+                src="./img/4.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="page">
+              <img
+                src="./img/5.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="page">
+              <img
+                src="./img/6.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="page">
+              <img
+                src="./img/7.png"
+                draggable="false"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="./turn.js"></script>
+    <script type="text/javascript">
+      var flipbookEL = document.getElementById("flipbook");
+
+      window.addEventListener("resize", function (e) {
+        flipbookEL.style.width = "";
+        flipbookEL.style.height = "";
+        $(flipbookEL).turn(
+          "size",
+          flipbookEL.clientWidth,
+          flipbookEL.clientHeight
+        );
+      });
+
+      $(flipbookEL).turn({
+        autoCenter: true,
+      });
+    </script>
+  </body>
+</html>
